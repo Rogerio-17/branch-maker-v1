@@ -8,7 +8,7 @@ let popup = document.querySelector(".popup-conteudo");
 
 campoValue.readOnly = true;
 
-campoValue.value = `${aba}/${id}-${brenchName}`;
+campoValue.value = `${aba.toLowerCase()}/${id.toLowerCase()}-${brenchName.toLowerCase()}`;
 
 function pegarValorCampo() {
   let linkInicial = document.querySelector(".barraDeNav");
@@ -23,11 +23,13 @@ function pegarValorCampo() {
     links[i].addEventListener("click", function () {
       event.preventDefault();
       aba = this.textContent;
+
+      // Limpa os campos
       id = " ";
       brenchName = "";
       campoId.value = "";
       campoNomeBranch.value = "";
-      campoValue.value = `${aba}/${id}-${brenchName}`;
+      campoValue.value = `${aba.toLowerCase()}/${id.toLowerCase()}-${brenchName.toLowerCase()}`;
       // Remover a classe "selecionada" antes de adicionar no elemento clicado
       for (var x = 0; x < links.length; x++) {
         links[x].classList.remove("selecionada");
@@ -42,7 +44,7 @@ function pegarValorCampo() {
 function addDadosNoCampoDeCopiar() {
   campoId.addEventListener("input", function () {
     id = campoId.value;
-    campoValue.value = `${aba}/${id}-${brenchName}`;
+    campoValue.value = `${aba.toLowerCase()}/${id.toLowerCase()}-${brenchName.toLowerCase()}`;
   });
 }
 
@@ -52,7 +54,7 @@ function addNomeBranch() {
     brenchName = campoNomeBranch.value;
     let textoModificado = brenchName.replace(/\s/g, "-");
 
-    campoValue.value = `${aba}/${id}-${textoModificado}`;
+    campoValue.value = `${aba.toLowerCase()}/${id.toLowerCase()}-${textoModificado.toLowerCase()}`;
   });
 }
 
@@ -62,13 +64,14 @@ function copiar() {
   copiar.addEventListener("click", function () {
     event.preventDefault();
 
+    // Verifica se os campos estão vazios, se sim não vai copiar
     if (campoId.value != "" && campoNomeBranch.value != "") {
       let paraCopia = document.getElementById("formated");
       paraCopia.select();
       document.execCommand("copy");
     }
 
-    //Verifica se tem campos vazios
+    //Verifica se tem campo vazio
     if (campoId.value != "" && campoNomeBranch.value != "") {
       let img = popup.querySelector("#img");
       let txt = popup.querySelector("#txt");
@@ -96,6 +99,13 @@ function exibirPopup() {
 function fecharPopup() {
   const popup = document.getElementById("popup");
   popup.style.display = "none";
+
+  // Limpa os campos apos ser fechado o popup
+  id = " ";
+  brenchName = "";
+  campoId.value = "";
+  campoNomeBranch.value = "";
+  campoValue.value = `${aba.toLowerCase()}/${id.toLowerCase()}-${brenchName.toLowerCase()}`;
 }
 
 copiar();
