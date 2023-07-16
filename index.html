@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Branch Maker</title>
+  </head>
+  <body>
+    <div class="main">
+      <h2>Branch Maker</h2>
+
+      <ul class="opcoes">
+        <li>
+          <a class="barraDeNav" value="Task" href="">Task</a>
+        </li>
+        <li>
+          <a class="barraDeNav" value="Bug" href="">Bug</a>
+        </li>
+        <li>
+          <a class="barraDeNav" value="Enhancement" href="">Enhancement</a>
+        </li>
+        <li>
+          <a class="barraDeNav" value="Hotfix" href="">Hotfix</a>
+        </li>
+      </ul>
+
+      <form action="" class="gerar">
+        <p class="nome_campo">ID</p>
+        <input class="campo_editavel" type="number" id="id" />
+
+        <p class="nome_campo">Branch name</p>
+        <input class="campo_editavel" type="text" id="branch" />
+
+        <input class="campo_task" type="text" id="formated" />
+        <div class="cont_bnt" id="cp">
+          <button class="btn">Copiar</button>
+        </div>
+      </form>
+
+      <div id="popup" class="popup">
+        <div class="popup-conteudo">
+          <img id="img" src="./img/check.png" alt="" />
+          <p id="txt">Texto copiado para a área de transferência!</p>
+          <button onclick="fecharPopup()">Fechar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

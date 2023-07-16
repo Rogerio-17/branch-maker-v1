@@ -1,0 +1,160 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+h2 {
+  color: #373737;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.opcoes {
+  display: flex;
+  width: 540px;
+  padding: 20px 14px;
+  background: #ddeff9;
+  border-radius: 13px;
+}
+
+.opcoes li:nth-child(0) {
+  margin: 0px;
+}
+
+.opcoes li:first-child {
+  margin-left: 0px;
+}
+
+.opcoes li {
+  list-style: none;
+  justify-content: space-between;
+  margin-left: 12px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.opcoes li a {
+  text-decoration: none;
+  color: #373737;
+  padding: 12px 28.8px;
+  background: #fff;
+  border-radius: 9px;
+
+  transition: 0.3s;
+}
+
+.opcoes li a.selecionada {
+  background: #00a3ff;
+  color: #fff;
+}
+
+.opcoes li a:hover {
+  background: #00a3ff;
+  color: #fff;
+}
+
+.main {
+  max-width: 540px;
+  margin: auto;
+}
+
+.nome_campo {
+  font-size: 18px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+.campo_editavel {
+  width: 540px;
+  padding: 10px 12px;
+  font-size: 18px;
+  box-shadow: none;
+  border: 1px solid #00a2ff42;
+  border-radius: 10px;
+  color: #373737;
+}
+
+.campo_editavel:focus {
+  outline: 2px solid #00a3ff;
+}
+
+.campo_task {
+  width: 540px;
+  padding: 18px 12px;
+  margin-top: 40px;
+  border-radius: 22px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #ddeff9;
+  outline: 0px;
+  box-shadow: none;
+  border: none;
+  color: #002e48;
+}
+
+.cont_bnt {
+  text-align: center;
+  width: 565px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: #00a3ff;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-size: 18px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #00a2ffc5;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-conteudo {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  width: 300px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.popup-conteudo img {
+  width: 55px;
+}
+
+button {
+  padding: 12px 32px;
+  background: #00a3ff;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 15px;
+
+  transition: 0.3s;
+}
