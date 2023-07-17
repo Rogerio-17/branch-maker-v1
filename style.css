@@ -6,6 +6,7 @@
 body {
   font-family: "Inter", sans-serif;
 }
+
 h2 {
   color: #373737;
   font-size: 40px;
@@ -157,4 +158,36 @@ button {
   margin-top: 15px;
 
   transition: 0.3s;
+}
+
+button:hover {
+  background: #00a2ffc5;
+}
+
+@media (max-width: 600px) {
+  .main {
+    margin-left: 10px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .opcoes {
+    width: 460px;
+  }
+
+  .opcoes li a {
+    padding: 10px 18.4px;
+  }
+
+  .campo_editavel {
+    width: 460px;
+  }
+
+  .campo_task {
+    width: 460px;
+  }
+
+  .cont_bnt {
+    width: 485px;
+  }
 }
