@@ -163,33 +163,3 @@ button {
 button:hover {
   background: #00a2ffc5;
 }
-
-@media (max-width: 600px) {
-  .main {
-    width: 70vh;
-
-    margin: auto;
-  }
-  h2 {
-    font-size: 30px;
-  }
-  .opcoes {
-    width: 93%;
-  }
-
-  .opcoes li a {
-    padding: 10px 14.4px;
-  }
-
-  .campo_editavel {
-    width: 93%;
-  }
-
-  .campo_task {
-    width: 94%;
-  }
-
-  .cont_bnt {
-    width: 95%;
-  }
-}
