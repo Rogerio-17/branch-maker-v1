@@ -25,10 +25,6 @@ function pegarValorCampo() {
       aba = this.textContent;
 
       // Limpa os campos
-      id = " ";
-      brenchName = "";
-      campoId.value = "";
-      campoNomeBranch.value = "";
       campoValue.value = `${aba.toLowerCase()}/${id.toLowerCase()}-${brenchName.toLowerCase()}`;
       // Remover a classe "selecionada" antes de adicionar no elemento clicado
       for (var x = 0; x < links.length; x++) {
@@ -43,8 +39,10 @@ function pegarValorCampo() {
 //Adiciona ID no campo para copiar
 function addDadosNoCampoDeCopiar() {
   campoId.addEventListener("input", function () {
+    brenchName = campoNomeBranch.value;
+    let textoModificado = brenchName.replace(/\s/g, "-");
     id = campoId.value;
-    campoValue.value = `${aba.toLowerCase()}/${id.toLowerCase()}-${brenchName.toLowerCase()}`;
+    campoValue.value = `${aba.toLowerCase()}/${id.toLowerCase()}-${textoModificado.toLowerCase()}`;
   });
 }
 
