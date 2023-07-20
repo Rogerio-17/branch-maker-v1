@@ -87,16 +87,22 @@ h2 {
 
 .campo_task {
   width: 540px;
-  padding: 18px 12px;
+  min-height: 40px;
+  padding-top: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
   margin-top: 40px;
   border-radius: 22px;
-  text-align: center;
+  text-align: center; /* Alinhamento horizontal */
   font-size: 18px;
   background-color: #ddeff9;
   outline: 0px;
   box-shadow: none;
   border: none;
   color: #002e48;
+  resize: none;
+  line-height: 20px; /* Alinhamento vertical */
+  word-wrap: break-word;
 }
 
 .cont_bnt {

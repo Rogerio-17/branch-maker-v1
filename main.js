@@ -53,7 +53,6 @@ function addNomeBranch() {
   campoNomeBranch.addEventListener("input", function () {
     brenchName = campoNomeBranch.value;
     let textoModificado = brenchName.replace(/\s/g, "-");
-
     campoValue.value = `${aba.toLowerCase()}/${id.toLowerCase()}-${textoModificado.toLowerCase()}`;
   });
 }
@@ -66,11 +65,14 @@ function copiar() {
 
     // Verifica se os campos estão vazios, se sim não vai copiar
     if (campoId.value != "" && campoNomeBranch.value != "") {
+      let txtoculto = "git checkout -b";
+      brenchName = campoNomeBranch.value;
+      let textoModificado = brenchName.replace(/\s/g, "-");
+      campoValue.value = `${txtoculto} ${aba.toLowerCase()}/${id.toLowerCase()}-${textoModificado.toLowerCase()}`;
       let paraCopia = document.getElementById("formated");
       paraCopia.select();
       document.execCommand("copy");
     }
-
     //Verifica se tem campo vazio
     if (campoId.value != "" && campoNomeBranch.value != "") {
       let img = popup.querySelector("#img");
