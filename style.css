@@ -88,12 +88,12 @@ h2 {
 .campo_task {
   width: 540px;
   min-height: 40px;
-  padding-top: 20px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 20px 12px;
   margin-top: 40px;
   border-radius: 22px;
-  text-align: center; /* Alinhamento horizontal */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 18px;
   background-color: #ddeff9;
   outline: 0px;
@@ -101,7 +101,6 @@ h2 {
   border: none;
   color: #002e48;
   resize: none;
-  line-height: 20px; /* Alinhamento vertical */
   word-wrap: break-word;
 }
 

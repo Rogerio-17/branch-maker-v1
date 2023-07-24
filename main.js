@@ -25,7 +25,7 @@ function pegarValorCampo() {
       aba = this.textContent;
 
       // Limpa os campos
-      campoValue.value = `${aba.toLowerCase()}/${id.toLowerCase()}-${brenchName.toLowerCase()}`;
+      campoValue.textContent = `${aba.toLowerCase()}/${id.toLowerCase()}-${brenchName.toLowerCase()}`;
       // Remover a classe "selecionada" antes de adicionar no elemento clicado
       for (var x = 0; x < links.length; x++) {
         links[x].classList.remove("selecionada");
@@ -42,7 +42,7 @@ function addDadosNoCampoDeCopiar() {
     brenchName = campoNomeBranch.value;
     let textoModificado = brenchName.replace(/\s/g, "-");
     id = campoId.value;
-    campoValue.value = `${aba.toLowerCase()}/${id.toLowerCase()}-${textoModificado.toLowerCase()}`;
+    campoValue.textContent = `${aba.toLowerCase()}/${id.toLowerCase()}-${textoModificado.toLowerCase()}`;
   });
 }
 
@@ -51,7 +51,7 @@ function addNomeBranch() {
   campoNomeBranch.addEventListener("input", function () {
     brenchName = campoNomeBranch.value;
     let textoModificado = brenchName.replace(/\s/g, "-");
-    campoValue.value = `${aba.toLowerCase()}/${id.toLowerCase()}-${textoModificado.toLowerCase()}`;
+    campoValue.textContent = `${aba.toLowerCase()}/${id.toLowerCase()}-${textoModificado.toLowerCase()}`;
   });
 }
 
@@ -66,10 +66,8 @@ function copiar() {
       let txtoculto = "git checkout -b";
       brenchName = campoNomeBranch.value;
       let textoModificado = brenchName.replace(/\s/g, "-");
-      campoValue.value = `${txtoculto} ${aba.toLowerCase()}/${id.toLowerCase()}-${textoModificado.toLowerCase()}`;
-      let paraCopia = document.getElementById("formated");
-      paraCopia.select();
-      document.execCommand("copy");
+      campoValue.textContent = `${txtoculto} ${aba.toLowerCase()}/${id.toLowerCase()}-${textoModificado.toLowerCase()}`;
+      navigator.clipboard.writeText(campoValue.textContent)
     }
     //Verifica se tem campo vazio
     if (campoId.value != "" && campoNomeBranch.value != "") {
@@ -105,7 +103,7 @@ function fecharPopup() {
   brenchName = "";
   campoId.value = "";
   campoNomeBranch.value = "";
-  campoValue.value = `${aba.toLowerCase()}/${id.toLowerCase()}-${brenchName.toLowerCase()}`;
+  campoValue.textContent = `${aba.toLowerCase()}/${id.toLowerCase()}-${brenchName.toLowerCase()}`;
 }
 
 copiar();
